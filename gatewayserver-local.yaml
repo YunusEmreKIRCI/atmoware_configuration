@@ -1,0 +1,38 @@
+ds:
+  port: 8888
+spring:
+  application:
+    name: gatewayserver
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: paymentservice
+            uri: lb://paymentservice
+            predicates:
+              - Path=/payments/**
+          - id: invoiceservice
+            uri: lb://invoiceservice
+            predicates:
+              - Path=/invoices/**
+          - id: discoveryserver
+            uri: http://localhost:8888
+            predicates:
+              - Path=/eureka/web
+            filters:
+              - SetPath=/
+          - id: discoveryserver-static
+            uri: http://localhost:8888
+            predicates:
+              - Path=/eureka/**
+
+
+
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${ds.port}/eureka/
+  registerWithEureka: true
+  fetchRegistry: true
