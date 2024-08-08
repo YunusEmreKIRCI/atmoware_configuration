@@ -1,5 +1,5 @@
 ds:
-  port: 8888
+  port: 8761
 spring:
   application:
     name: gatewayserver
