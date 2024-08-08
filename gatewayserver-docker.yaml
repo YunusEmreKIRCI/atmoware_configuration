@@ -16,13 +16,13 @@ spring:
             predicates:
               - Path=/invoices/**
           - id: discoveryserver
-            uri: http://discovery-server:8888
+            uri: http://discovery-server:8761
             predicates:
               - Path=/eureka/web
             filters:
               - SetPath=/
           - id: discoveryserver-static
-            uri: http://discovery-server:8888
+            uri: http://discovery-server:8761
             predicates:
               - Path=/eureka/**
 
