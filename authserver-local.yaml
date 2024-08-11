@@ -1,0 +1,20 @@
+ds:
+  port: 8761
+
+server:
+  port: 8083
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${ds.port}/eureka/
+  registerWithEureka: true
+  fetchRegistry: true
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/library
+    username: postgres
+    password: zxc1354qas
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
