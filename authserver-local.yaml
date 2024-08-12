@@ -12,7 +12,7 @@ eureka:
   fetchRegistry: true
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/library
+    url: jdbc:postgresql://localhost:5432/authdb
     username: postgres
     password: zxc1354qas
   jpa:
