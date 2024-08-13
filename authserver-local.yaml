@@ -19,5 +19,5 @@ spring:
     hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
 jwt:
-  expiration: 600000
+  expiration: 60000000
   secret: l7pfg179ffEWtPs4NLUu4C8yneeskUntYbbnQhynBvJkPHuCb8iPz3rfdFO1jAShFg/1zT6CHvHl4i3BQMNNoZZVgBQu5oMRTNYYLobHhZm8Ef1i2wZ1HF7loUYTUvD0n6wUCLvEuUa6yQFvLJ6ftN91tFvqY5jekmClPlZ8QHogYl7rxtbCQUnnwlC1WWfyPrMcWVwX2SAOaKV/gNqE9xFpAdiP6IXoQn0zlNq0F3dkMPsHs5MQgxay6QHVVX0UZgSKqbZsqQTN+qB6bWfvlNu38Uu/d9YQlpmYxXU81Qbd7luyex4tPjpWjIOB5N0AteoBj3/o/CBFHHoPvyICI5aBk6nvqYkP7Gasrivfcsw=
